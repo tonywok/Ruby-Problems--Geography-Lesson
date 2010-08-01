@@ -1,0 +1,38 @@
+Grabbed from: http://www.rubyproblems.com/problems/2010/04/geography_lesson
+
+You've recently stumbled across a treasure trove of geospatial data,
+and are looking to put it to good use. But like most data that falls
+into your lap from unknown origins, there is significant normalization 
+work to be done. Today you'll be building a simple tool that takes latlong 
+coordinates expressed in a number of different formats and converts them to [x,y] points.
+
+YOUR TASK
+
+While latitude-longitude coordinates are essentially nothing more than a
+way to locate points on a planar map, they have a ton of different representations
+in practice. A quick scan through your source data reveals many different formats
+you'll need to work with.
+
+Your goal is to process all of the formats listed in the document above, normalizing
+each of them to an array in [x,y] form. Your API might end up looking something like this:
+
+          LatLong.to_xy("45.1234 N 36.2345 W") #=> [-36.2345, 45.1234]
+        
+If you're not careful about how you write your implementation code, you will end up 
+with a lot of duplicate code, since many of the formats only vary from one another 
+in subtle ways. Writing adequate tests will really help out here, as it'll allow you
+to refactor your code without worrying about breaking support for one of the required
+formats in the process.
+
+RESOURCES
+
+As mentioned earlier, you'll need the List of valid latlong formats to complete this
+exercise.
+
+With a few well placed regular expressions, you should be able to tear through this
+problem in no time at all. But if you feel a bit rusty on your regex-fu, here are a
+couple resources to get you up to speed:
+
+Rubular: a Ruby regular expression editor
+Ruby Best Practices, Text Processing and File Management
+
